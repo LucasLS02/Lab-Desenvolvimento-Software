@@ -1,24 +1,8 @@
-package app;
+package app.App;
 
 import java.util.*;
 
 public class Secretaria extends Usuario{
-
-	@Override
-	public Usuario cadastrar(String username, String senha) {
-		return null;
-	}
-
-	@Override
-	public void login(String username, String senha) {
-		
-	}
-
-	@Override
-	public void redefinirSenha(String username, String senha) {
-		
-	}
-
 	public void gerarRelatorio(String cursoId) {
 		
 	}

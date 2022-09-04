@@ -7,6 +7,7 @@ public abstract class Usuario {
 
 	public static int ID = 0;
 	private int id;
+	private int token;
 	private String nome;
 	private String username;
 	private String senha;
@@ -43,13 +44,22 @@ public abstract class Usuario {
 		this.senha = senha;
 	}
 
-	public void cadastrar(String userName, String senha) throws ExcecaoUsuarioJaCadastrado {
+	public int getToken() {
+		return token;
+	}
+
+	public void setToken(int token) {
+		this.token = token;
+	}
+
+	public void cadastrar(String userName, String senha, int token) throws ExcecaoUsuarioJaCadastrado {
 		if(this.getUsername() != null || this.getSenha() != null){
 			throw new ExcecaoUsuarioJaCadastrado();
 		}
 		else{
 			this.setUsername(userName);
 			this.setSenha(senha);
+			this.setToken(token);
 		}
 	}
 
@@ -70,11 +80,12 @@ public abstract class Usuario {
 
 	@Override
 	public String toString() {
-		return "{" +
-				"id=" + id +
-				", nome='" + nome + '\'' +
-				", username='" + username + '\'' +
-				", senha='" + senha + '\'' +
+		return "{\n" +
+				"id=" + id + "," + "\n" +
+				"nome='" + nome + '\'' + "," + "\n" +
+				"username='" + username + '\'' + "," + "\n" +
+				"senha='" + senha + '\'' + "," + "\n" +
+				"token='" + token + '\'' + "\n" +
 				'}';
 	}
 

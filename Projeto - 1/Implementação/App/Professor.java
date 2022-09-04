@@ -19,7 +19,7 @@ public class Professor extends Usuario implements Matriculavel {
         matricular();
         this.disciplinas = new ArrayList<Disciplina>();
         try {
-            cadastrar(userName, senha);
+            cadastrar(userName, senha, 2);
         } catch (ExcecaoUsuarioJaCadastrado e) {
             System.err.println(e.getMessage());
         }

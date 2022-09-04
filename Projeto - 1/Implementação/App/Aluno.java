@@ -16,7 +16,7 @@ public class Aluno extends Usuario implements Matriculavel {
         this.setNome(nome);
         this.curso = null;
         try {
-            cadastrar(userName, senha);
+            cadastrar(userName, senha, 3);
         } catch (ExcecaoUsuarioJaCadastrado e) {
             System.err.println(e.getMessage());
         }

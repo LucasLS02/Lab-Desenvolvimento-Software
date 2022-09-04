@@ -3,9 +3,22 @@ package app;
 import java.util.*;
 
 import excecoes.ExcecaoLimiteDeAlunos;
+import excecoes.ExcecaoUsuarioJaCadastrado;
 
 public class Secretaria extends Usuario {
 	private List<Curso> cursos = new ArrayList<Curso>();
+	
+	Secretaria(String nome, String userName, String senha) {
+		ID = ID + 1;
+		this.setId(ID);
+		this.setNome(nome);
+		this.cursos = null;
+		try {
+			cadastrar(userName, senha, 1);
+		} catch (ExcecaoUsuarioJaCadastrado e) {
+			System.err.println(e.getMessage());
+		}
+	}
 	
 	public List<Curso> getCursos() {
 		return cursos;

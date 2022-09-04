@@ -1,4 +1,4 @@
-package app.App;
+package app;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +62,7 @@ public class Curso {
 
     @Override
     public String toString() {
-        return "Curso{ " +
+        return "{ " +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", creditos='" + creditos + '\'' +

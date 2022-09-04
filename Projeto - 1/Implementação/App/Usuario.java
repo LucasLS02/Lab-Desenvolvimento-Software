@@ -1,7 +1,7 @@
-package app.App;
+package app;
 
-import app.Excecoes.ExcecaoSenhaInvalida;
-import app.Excecoes.ExcecaoUsuarioJaCadastrado;
+import excecoes.ExcecaoSenhaInvalida;
+import excecoes.ExcecaoUsuarioJaCadastrado;
 
 public abstract class Usuario {
 
@@ -70,7 +70,7 @@ public abstract class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario{" +
+		return "{" +
 				"id=" + id +
 				", nome='" + nome + '\'' +
 				", username='" + username + '\'' +

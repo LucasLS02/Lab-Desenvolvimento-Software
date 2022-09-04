@@ -1,4 +1,4 @@
-package app.Interfaces;
+package interfaces;
 
 public interface Matriculavel {
 	public void matricular();

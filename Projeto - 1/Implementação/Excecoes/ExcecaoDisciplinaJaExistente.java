@@ -1,7 +1,9 @@
-package app.Excecoes;
+package excecoes;
 
 public class ExcecaoDisciplinaJaExistente extends Exception{
-    public ExcecaoDisciplinaJaExistente(){
+    private static final long serialVersionUID = 1L;
+
+	public ExcecaoDisciplinaJaExistente(){
         super("Não é possíve adicionar essa disciplina pois ela já existe.");
     }
 }

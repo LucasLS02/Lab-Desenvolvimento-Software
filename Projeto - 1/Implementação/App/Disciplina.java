@@ -1,6 +1,6 @@
-package app.App;
+package app;
 
-import app.Excecoes.ExcecaoLimiteDeAlunos;
+import excecoes.ExcecaoLimiteDeAlunos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,7 +87,7 @@ public class Disciplina  {
 
 	@Override
 	public String toString() {
-		return "Disciplina { " +
+		return "{ " +
 				"id=" + id +
 				", nome='" + nome + '\'' +
 				", ativa=" + ativa +

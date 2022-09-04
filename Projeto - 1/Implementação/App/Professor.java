@@ -1,8 +1,8 @@
-package app.App;
+package app;
 
-import app.Excecoes.ExcecaoDisciplinaJaExistente;
-import app.Excecoes.ExcecaoUsuarioJaCadastrado;
-import app.Interfaces.Matriculavel;
+import excecoes.ExcecaoDisciplinaJaExistente;
+import excecoes.ExcecaoUsuarioJaCadastrado;
+import interfaces.Matriculavel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +78,7 @@ public class Professor extends Usuario implements Matriculavel {
 
     @Override
     public String toString() {
-        return "Professor{ " +
+        return "{ " +
                 "matricula='" + matricula + '\'' +
                 ", disciplinas=" + disciplinas +
                 " } " + super.toString();

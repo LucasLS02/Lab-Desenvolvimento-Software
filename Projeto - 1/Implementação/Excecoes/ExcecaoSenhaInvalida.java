@@ -1,7 +1,9 @@
-package app.Excecoes;
+package excecoes;
 
 public class ExcecaoSenhaInvalida extends Exception{
-    public ExcecaoSenhaInvalida(String message){
+    private static final long serialVersionUID = 1L;
+
+	public ExcecaoSenhaInvalida(String message){
         super(message);
     }
 }

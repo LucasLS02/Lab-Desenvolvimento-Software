@@ -1,9 +1,9 @@
-package app.App;
+package app;
 
-import app.Excecoes.ExcecaoCursoJaCadastrado;
-import app.Excecoes.ExcecaoCursoNaoCadastrado;
-import app.Excecoes.ExcecaoUsuarioJaCadastrado;
-import app.Interfaces.Matriculavel;
+import excecoes.ExcecaoCursoJaCadastrado;
+import excecoes.ExcecaoCursoNaoCadastrado;
+import excecoes.ExcecaoUsuarioJaCadastrado;
+import interfaces.Matriculavel;
 
 public class Aluno extends Usuario implements Matriculavel {
 
@@ -60,5 +60,12 @@ public class Aluno extends Usuario implements Matriculavel {
             throw new ExcecaoCursoNaoCadastrado();
         }
         setCurso(null);
+    }
+    
+    @Override
+    public String toString() {
+        return "{ " +
+                "matricula='" + matricula + '\'' +
+                " } " + super.toString();
     }
 }

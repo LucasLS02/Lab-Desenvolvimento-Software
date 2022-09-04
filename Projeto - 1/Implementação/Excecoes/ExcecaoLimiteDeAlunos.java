@@ -1,7 +1,9 @@
-package app.Excecoes;
+package excecoes;
 
 public class ExcecaoLimiteDeAlunos extends Exception{
-    public ExcecaoLimiteDeAlunos(int num, String operacao){
+    private static final long serialVersionUID = 1L;
+
+	public ExcecaoLimiteDeAlunos(int num, String operacao){
         super("Não é possível" + operacao + " o numero de alunos pois o limite é " + num + ".");
     }
 }

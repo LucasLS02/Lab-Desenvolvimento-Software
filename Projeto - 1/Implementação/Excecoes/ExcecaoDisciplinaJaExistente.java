@@ -1,4 +1,4 @@
-package excecoes;
+package Excecoes;
 
 public class ExcecaoDisciplinaJaExistente extends Exception{
     private static final long serialVersionUID = 1L;

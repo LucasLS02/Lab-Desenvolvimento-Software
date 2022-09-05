@@ -1,8 +1,8 @@
-package app;
+package App;
 
-import excecoes.ExcecaoDisciplinaJaExistente;
-import excecoes.ExcecaoUsuarioJaCadastrado;
-import interfaces.Matriculavel;
+import Excecoes.ExcecaoDisciplinaJaExistente;
+import Excecoes.ExcecaoUsuarioJaCadastrado;
+import Interfaces.Matriculavel;
 
 import java.util.ArrayList;
 import java.util.List;

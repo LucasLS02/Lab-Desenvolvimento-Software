@@ -1,6 +1,6 @@
-package app;
+package App;
 
-import excecoes.ExcecaoLimiteDeAlunos;
+import Excecoes.ExcecaoLimiteDeAlunos;
 
 import java.util.ArrayList;
 import java.util.List;

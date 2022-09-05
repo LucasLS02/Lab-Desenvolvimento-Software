@@ -1,9 +1,9 @@
-package app;
+package App;
 
-import excecoes.ExcecaoCursoJaCadastrado;
-import excecoes.ExcecaoCursoNaoCadastrado;
-import excecoes.ExcecaoUsuarioJaCadastrado;
-import interfaces.Matriculavel;
+import Excecoes.ExcecaoCursoJaCadastrado;
+import Excecoes.ExcecaoCursoNaoCadastrado;
+import Excecoes.ExcecaoUsuarioJaCadastrado;
+import Interfaces.Matriculavel;
 
 public class Aluno extends Usuario implements Matriculavel {
 

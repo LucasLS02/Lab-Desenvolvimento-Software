@@ -1,9 +1,9 @@
-package app;
+package App;
 
 import java.util.*;
 
-import excecoes.ExcecaoLimiteDeAlunos;
-import excecoes.ExcecaoUsuarioJaCadastrado;
+import Excecoes.ExcecaoLimiteDeAlunos;
+import Excecoes.ExcecaoUsuarioJaCadastrado;
 
 public class Secretaria extends Usuario {
 	private List<Curso> cursos = new ArrayList<Curso>();
@@ -29,7 +29,8 @@ public class Secretaria extends Usuario {
 	}
 
 	public void cadastrarCurso(Curso curso) {
-		cursos.add(curso);;
+		cursos.add(curso);
+		System.out.println(cursos);
 	}
 	
 	public void deletarCurso(Curso curso) {

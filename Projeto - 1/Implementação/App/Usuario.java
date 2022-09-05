@@ -1,7 +1,7 @@
-package app;
+package App;
 
-import excecoes.ExcecaoSenhaInvalida;
-import excecoes.ExcecaoUsuarioJaCadastrado;
+import Excecoes.ExcecaoSenhaInvalida;
+import Excecoes.ExcecaoUsuarioJaCadastrado;
 
 public abstract class Usuario {
 

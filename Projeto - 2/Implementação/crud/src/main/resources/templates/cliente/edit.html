@@ -1,0 +1,46 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmls="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragmentos :: head('Editar Cliente #')}">
+
+</head>
+
+<body>
+    <header th:replace="~{fragmentos :: header('Editar Cliente #' + ${clienteId})}">
+    </header>
+    <div class="container">
+        <div class="row">
+            <form th:object="${requisicaoNovoCliente}" th:action="@{/cliente/{clienteId}(clienteId = ${clienteId})}" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">RG do Cliente</label>
+                    <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{rg}">
+                    <div class="invalid-feedback" th:errors="*{rg}"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">CPF do Cliente</label>
+                    <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{cpf}">
+                    <div class="invalid-feedback" th:errors="*{cpf}"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nome do Cliente</label>
+                    <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{nome}">
+                    <div class="invalid-feedback" th:errors="*{nome}"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Endereco do Cliente</label>
+                    <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{endereco}">
+                    <div class="invalid-feedback" th:errors="*{endereco}"></div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submeter</button>
+                <a class="p-2" href="javascript:history.back()">Voltar</a>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

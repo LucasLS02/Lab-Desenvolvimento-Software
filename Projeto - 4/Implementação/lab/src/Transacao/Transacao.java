@@ -7,38 +7,6 @@ public class Transacao {
     private String usuario_destinatario;
     private int quantidade_moedas;
 
-    public int getId_transacao() {
-        return id_transacao;
-    }
-
-    public void setId_transacao(String id_transacao) {
-        this.id_transacao = Integer.parseInt(id_transacao);
-    }
-
-    public String getUsuario_remetente() {
-        return usuario_remetente;
-    }
-
-    public void setUsuario_remetente(String usuario_remetente) {
-        this.usuario_remetente = usuario_remetente;
-    }
-
-    public String getUsuario_destinatario() {
-        return usuario_destinatario;
-    }
-
-    public void setUsuario_destinatario(String usuario_destinatario) {
-        this.usuario_destinatario = usuario_destinatario;
-    }
-
-    public int getQuantidade_moedas() {
-        return quantidade_moedas;
-    }
-
-    public void setQuantidade_moedas(int quantidade_moedas) {
-        this.quantidade_moedas = quantidade_moedas;
-    }
-
     public Transacao(String usuario_remetente, String usuario_destinatario, int quantidade_moedas) {
         ID = ID + 1;
         setId_transacao(String.valueOf(ID));
@@ -72,6 +40,38 @@ public class Transacao {
                 ", usuario_remetente='" + usuario_remetente + '\'' +
                 ", usuario_destinatario='" + usuario_destinatario + '\'' +
                 ", quantidade_moedas=" + quantidade_moedas +
-                '}';
+                "}\n";
+    }
+
+    public int getId_transacao() {
+        return id_transacao;
+    }
+
+    public void setId_transacao(String id_transacao) {
+        this.id_transacao = Integer.parseInt(id_transacao);
+    }
+
+    public String getUsuario_remetente() {
+        return usuario_remetente;
+    }
+
+    public void setUsuario_remetente(String usuario_remetente) {
+        this.usuario_remetente = usuario_remetente;
+    }
+
+    public String getUsuario_destinatario() {
+        return usuario_destinatario;
+    }
+
+    public void setUsuario_destinatario(String usuario_destinatario) {
+        this.usuario_destinatario = usuario_destinatario;
+    }
+
+    public int getQuantidade_moedas() {
+        return quantidade_moedas;
+    }
+
+    public void setQuantidade_moedas(int quantidade_moedas) {
+        this.quantidade_moedas = quantidade_moedas;
     }
 }

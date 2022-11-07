@@ -5,8 +5,10 @@ import Transacao.Transacao;
 
 import java.util.List;
 
+import Excecoes.ExcecaoIdIncorreta;
+
 public interface Usuario_visualizador {
 
-    public List<Transacao> visualizar_extrato(String username);
-    public Transacao visualizar_transacao(String id_transacao);
+    public String visualizar_extrato();
+    public Transacao visualizar_transacao(int id_transacao) throws ExcecaoIdIncorreta;
 }

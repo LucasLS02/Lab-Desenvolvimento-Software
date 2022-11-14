@@ -78,4 +78,13 @@ public class Usuario_login extends Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario_login{" +
+                "is_looged=" + is_looged +
+                ", username='" + username + '\'' +
+                ", senha='" + senha + '\'' +
+                "} " + super.toString();
+    }
 }

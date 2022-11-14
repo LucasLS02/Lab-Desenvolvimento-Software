@@ -59,4 +59,12 @@ public class Aluno extends Usuario_login implements Usuario_visualizador {
 	public void setMoedas(int moedas) {
 		this.moedas = moedas;
 	}
+
+	@Override
+	public String toString() {
+		return "Aluno{" +
+				"transacoes=" + transacoes +
+				", moedas=" + moedas +
+				"} " + super.toString();
+	}
 }

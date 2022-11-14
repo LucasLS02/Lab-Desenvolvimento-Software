@@ -1,7 +1,9 @@
 package Pessoas;
 
+import java.io.IOException;
 import java.util.*;
 
+import Arquivos.ManipuladorArquivo;
 import TransacoesEVantagens.Vantagem;
 import Usuario.Usuario_login;
 
@@ -12,7 +14,8 @@ public class Empresa extends Usuario_login {
 		super(nome, email, cpf, rg, endereco, username, senha);
 	}
 	
-	public void cadastrarVantagem(Vantagem vantagem) {
+	public void cadastrarVantagem(Vantagem vantagem) throws IOException {
+		ManipuladorArquivo.escritor("/Users/lucas/Desktop/vantagens.txt", vantagem.toString());
 		this.vantagens.add(vantagem);
 	}
 	

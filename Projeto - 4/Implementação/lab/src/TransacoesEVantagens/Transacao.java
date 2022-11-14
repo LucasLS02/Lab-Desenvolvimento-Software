@@ -1,4 +1,4 @@
-package Transacao;
+package TransacoesEVantagens;
 
 public class Transacao {
     private static int ID = 0;
@@ -6,13 +6,15 @@ public class Transacao {
     private String usuario_remetente;
     private String usuario_destinatario;
     private int quantidade_moedas;
+    private String motivoTransacao;
 
-    public Transacao(String usuario_remetente, String usuario_destinatario, int quantidade_moedas) {
+    public Transacao(String usuario_remetente, String usuario_destinatario, int quantidade_moedas, String motivoTransacao) {
         ID = ID + 1;
         setId_transacao(String.valueOf(ID));
         setUsuario_remetente(usuario_remetente);
         setUsuario_destinatario(usuario_destinatario);
         setQuantidade_moedas(quantidade_moedas);
+        setMotivoTransacao(motivoTransacao);
     }
 
     @Override
@@ -74,4 +76,12 @@ public class Transacao {
     public void setQuantidade_moedas(int quantidade_moedas) {
         this.quantidade_moedas = quantidade_moedas;
     }
+
+	public String getMotivoTransacao() {
+		return motivoTransacao;
+	}
+
+	public void setMotivoTransacao(String motivoTransacao) {
+		this.motivoTransacao = motivoTransacao;
+	}
 }

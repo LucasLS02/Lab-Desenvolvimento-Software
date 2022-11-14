@@ -4,7 +4,7 @@ import java.util.*;
 
 import Excecoes.*;
 import Interfaces.Usuario_visualizador;
-import Transacao.Transacao;
+import TransacoesEVantagens.Transacao;
 import Usuario.Usuario_login;
 
 public class Professor extends Usuario_login implements Usuario_visualizador {
@@ -46,14 +46,13 @@ public class Professor extends Usuario_login implements Usuario_visualizador {
 		}
 	}
 	
-	public void novoSemestre() {
-		this.moedas += 1000;
-	}
-	
-	public void distribuirMoedas(double moedasDoacao, Aluno aluno, String motivo) throws ExcecaoSaldoIndisponivel {
+	public void distribuirMoedas(int moedasDoacao, Aluno aluno, String motivo) throws ExcecaoSaldoIndisponivel {
 		if((this.moedas - moedasDoacao) >= 0) {
-			aluno.receberMoedas(moedasDoacao, motivo);
-			this.moedas -= moedasDoacao;
+			Transacao t = new Transacao(this.getNome(), aluno.getNome(), moedasDoacao, motivo);
+			this.transacoes.add(t);
+			aluno.getTransacoes().add(t);
+			aluno.setMoedas(aluno.getMoedas() + moedasDoacao);
+			this.moedas -= moedasDoacao;	
 		} else {
 			throw new ExcecaoSaldoIndisponivel();
 		}

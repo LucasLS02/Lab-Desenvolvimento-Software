@@ -1,11 +1,10 @@
 package Interfaces;
 
 
-import Transacao.Transacao;
-
 import java.util.List;
 
 import Excecoes.ExcecaoIdIncorreta;
+import TransacoesEVantagens.Transacao;
 
 public interface Usuario_visualizador {
 

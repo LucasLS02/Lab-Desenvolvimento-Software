@@ -14,8 +14,7 @@ public class ManipuladorArquivo {
         String conteudo = "";
         while (true) {
             if (linha != null) {
-                conteudo += linha;
-
+                conteudo += linha + "\n";
             } else
                 break;
             linha = buffRead.readLine();
@@ -27,6 +26,16 @@ public class ManipuladorArquivo {
     public static void escritor(String path, String content) throws IOException {
         try{
             BufferedWriter buffWrite = new BufferedWriter(new FileWriter(path));
+            buffWrite.append(content).append("\n");
+            buffWrite.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void escritor(String path, String content, boolean parametro) throws IOException {
+        try{
+            BufferedWriter buffWrite = new BufferedWriter(new FileWriter(path, parametro));
             buffWrite.append(content).append("\n");
             buffWrite.close();
         } catch (IOException e) {

@@ -1,8 +1,5 @@
 package Interfaces;
 
-
-import java.util.List;
-
 import Excecoes.ExcecaoIdIncorreta;
 import TransacoesEVantagens.Transacao;
 

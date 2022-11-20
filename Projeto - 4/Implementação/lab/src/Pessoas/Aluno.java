@@ -5,6 +5,7 @@ import java.util.*;
 import Excecoes.ExcecaoIdIncorreta;
 import Interfaces.Usuario_visualizador;
 import TransacoesEVantagens.Transacao;
+import TransacoesEVantagens.Vantagem;
 import Usuario.Usuario_login;
 
 public class Aluno extends Usuario_login implements Usuario_visualizador {
@@ -44,6 +45,14 @@ public class Aluno extends Usuario_login implements Usuario_visualizador {
 		}
 	}
 
+	public void resgatarVantagem(Empresa empresa, String tituloVantagem) {
+		for(Vantagem v : empresa.getVantagens()) {
+			if(v.getTitulo().equals(tituloVantagem)) {
+				this.moedas -= v.getCusto();
+			}
+		}
+	}
+
 	public List<Transacao> getTransacoes() {
 		return transacoes;
 	}
@@ -62,9 +71,10 @@ public class Aluno extends Usuario_login implements Usuario_visualizador {
 
 	@Override
 	public String toString() {
-		return "Aluno{" +
+		return super.toString() +
+				"Aluno{" +
 				"transacoes=" + transacoes +
 				", moedas=" + moedas +
-				"} " + super.toString();
+				"} ";
 	}
 }

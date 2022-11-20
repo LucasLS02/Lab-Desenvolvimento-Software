@@ -1,20 +1,26 @@
 package TransacoesEVantagens;
 
+import java.io.IOException;
+
+import Arquivos.ManipuladorArquivo;
+import Usuario.Usuario;
+
 public class Transacao {
     private static int ID = 0;
     private int id_transacao;
-    private String usuario_remetente;
-    private String usuario_destinatario;
+    private Usuario usuario_remetente;
+    private Usuario usuario_destinatario;
     private int quantidade_moedas;
     private String motivoTransacao;
 
-    public Transacao(String usuario_remetente, String usuario_destinatario, int quantidade_moedas, String motivoTransacao) {
+    public Transacao(Usuario usuario_remetente, Usuario usuario_destinatario, int quantidade_moedas, String motivoTransacao) throws IOException {
         ID = ID + 1;
         setId_transacao(String.valueOf(ID));
         setUsuario_remetente(usuario_remetente);
         setUsuario_destinatario(usuario_destinatario);
         setQuantidade_moedas(quantidade_moedas);
         setMotivoTransacao(motivoTransacao);
+        ManipuladorArquivo.escritor("../Lab_de_Desenvolvimento/Projeto - 4/transacoes.txt", this.toString(), true);
     }
 
     @Override
@@ -23,8 +29,8 @@ public class Transacao {
         if (!(o instanceof Transacao transacao)) return false;
 
         if (quantidade_moedas != transacao.quantidade_moedas) return false;
-        if (!usuario_remetente.equals(transacao.usuario_remetente)) return false;
-        return usuario_destinatario.equals(transacao.usuario_destinatario);
+        if (!usuario_remetente.getNome().equals(transacao.usuario_remetente.getNome())) return false;
+        return usuario_destinatario.getNome().equals(transacao.usuario_destinatario.getNome());
     }
 
     @Override
@@ -53,19 +59,19 @@ public class Transacao {
         this.id_transacao = Integer.parseInt(id_transacao);
     }
 
-    public String getUsuario_remetente() {
+    public Usuario getUsuario_remetente() {
         return usuario_remetente;
     }
 
-    public void setUsuario_remetente(String usuario_remetente) {
+    public void setUsuario_remetente(Usuario usuario_remetente) {
         this.usuario_remetente = usuario_remetente;
     }
 
-    public String getUsuario_destinatario() {
+    public Usuario getUsuario_destinatario() {
         return usuario_destinatario;
     }
 
-    public void setUsuario_destinatario(String usuario_destinatario) {
+    public void setUsuario_destinatario(Usuario usuario_destinatario) {
         this.usuario_destinatario = usuario_destinatario;
     }
 

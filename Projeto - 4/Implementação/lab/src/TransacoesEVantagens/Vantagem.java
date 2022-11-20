@@ -17,7 +17,7 @@ public class Vantagem {
                 "titulo=" + titulo +
                 ", descricao='" + descricao + '\'' +
                 ", custo='" + custo + '\'' +
-                "}\n";
+                "}";
 	}
 
 	public String getTitulo() {

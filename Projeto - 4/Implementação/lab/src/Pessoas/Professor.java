@@ -1,5 +1,6 @@
 package Pessoas;
 
+import java.io.IOException;
 import java.util.*;
 
 import Excecoes.*;
@@ -46,9 +47,9 @@ public class Professor extends Usuario_login implements Usuario_visualizador {
 		}
 	}
 	
-	public void distribuirMoedas(int moedasDoacao, Aluno aluno, String motivo) throws ExcecaoSaldoIndisponivel {
+	public void distribuirMoedas(int moedasDoacao, Aluno aluno, String motivo) throws ExcecaoSaldoIndisponivel, IOException {
 		if((this.moedas - moedasDoacao) >= 0) {
-			Transacao t = new Transacao(this.getNome(), aluno.getNome(), moedasDoacao, motivo);
+			Transacao t = new Transacao(this, aluno, moedasDoacao, motivo);
 			this.transacoes.add(t);
 			aluno.getTransacoes().add(t);
 			aluno.setMoedas(aluno.getMoedas() + moedasDoacao);
@@ -80,5 +81,14 @@ public class Professor extends Usuario_login implements Usuario_visualizador {
 
 	public void setMoedas(double moedas) {
 		this.moedas = moedas;
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"Professor{" +
+				"departamento=" + departamento +
+				"moedas=" + moedas +
+				"} ";
 	}
 }

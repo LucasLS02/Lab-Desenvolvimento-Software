@@ -81,10 +81,10 @@ public class Usuario_login extends Usuario {
 
     @Override
     public String toString() {
-        return "Usuario_login{" +
+        return super.toString() + "Usuario_login{" +
                 "is_looged=" + is_looged +
                 ", username='" + username + '\'' +
                 ", senha='" + senha + '\'' +
-                "} " + super.toString();
+                "} ";
     }
 }

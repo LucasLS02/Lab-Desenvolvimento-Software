@@ -10,14 +10,14 @@ public class Vantagem {
 		setDescricao(descricao);
 		setCusto(custo);
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Vantagem{" +
-                "titulo=" + titulo +
-                ", descricao='" + descricao + '\'' +
-                ", custo='" + custo + '\'' +
-                "}";
+				"titulo='" + titulo + '\'' +
+				", descricao='" + descricao + '\'' +
+				", custo=" + custo +
+				'}';
 	}
 
 	public String getTitulo() {

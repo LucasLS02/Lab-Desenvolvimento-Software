@@ -39,6 +39,7 @@ public class Main {
                     option = -1;
                     break;
                 case 1:
+                    int opt = -1;
                     System.out.println("O que a empresa gostaria de executar?");
                     System.out.println(" ");
                     System.out.println("0) Sair.");
@@ -46,44 +47,43 @@ public class Main {
                     System.out.println("2) Remover vantagem");
                     System.out.println("3) Listar vantagem");
                     System.out.println(" ");
-                    option = scanner.nextInt();
-                    switch (option){
-                        case 0:
-                            break;
-                        case 1:
+                    opt = scanner.nextInt();
+                    scanner.nextLine();
+                    switch (opt) {
+                        case 0 -> opt = 0;
+                        case 1 -> {
                             System.out.println("");
                             System.out.println("Digite os dados para cadastrar sua vantagem: ");
                             System.out.println("Título: ");
-                            String titulo = scanner.next();
+                            String titulo = scanner.nextLine();
                             System.out.println("Descrição: ");
-                            String descricao = scanner.next();
+                            String descricao = scanner.nextLine();
                             System.out.println("Custo: ");
-                            int custo = scanner.nextInt();
-                            Vantagem v = new Vantagem(titulo, descricao, custo);
+                            String custo = scanner.nextLine();
+                            Vantagem v = new Vantagem(titulo, descricao, Integer.parseInt(custo));
                             empresa.cadastrarVantagem(v);
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             System.out.println("Qual vantagem voce deseja deletar?");
                             String t = scanner.next();
-
                             List<Vantagem> vantagem_ = empresa.getVantagens();
                             for (Vantagem vantagem : vantagem_) {
-                                if(vantagem.getTitulo().equals(t)){
+                                if (vantagem.getTitulo().equals(t)) {
                                     empresa.removerVantagem(vantagem);
                                     System.out.println("Vantagem removida.");
                                 }
                             }
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             System.out.println("Lista de vantagens");
                             List<Vantagem> van = empresa.getVantagens();
-
                             for (Vantagem vantagem : van) {
                                 System.out.println(vantagem.toString());
                             }
-                            break;
+                        }
                     }
                 case 2:
+                    int option_ = -1;
                     System.out.println("O que o Aluno gostaria de executar?");
                     System.out.println(" ");
                     System.out.println("0) Sair.");
@@ -91,32 +91,32 @@ public class Main {
                     System.out.println("2) Visualizar extrato.");
                     System.out.println("3) Visualizar transação.");
                     System.out.println(" ");
-                    option = scanner.nextInt();
-                    switch (option) {
-                        case 0:
-                            break;
-                        case 1:
+                    option_ = scanner.nextInt();
+                    switch (option_) {
+                        case 0 -> option_ = 0;
+                        case 1 -> {
                             System.out.println("Resgate de vantagem");
                             System.out.println(" ");
                             System.out.println("Qual o nome da vantagem? ");
                             String vantagem_empresa = scanner.next();
                             aluno.resgatarVantagem(empresa, vantagem_empresa);
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             System.out.println("Extrato do aluno: ");
                             String extrto = aluno.visualizar_extrato();
                             System.out.println(extrto);
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             System.out.println("TRansações do aluno: ");
                             List<Transacao> transacoes = aluno.getTransacoes();
-                            for (Transacao transacao_ : transacoes){
+                            for (Transacao transacao_ : transacoes) {
                                 System.out.println(transacao_.toString());
                             }
-                            break;
+                        }
                     }
 
                 case 3:
+                    int optio = -1;
                     System.out.println("O que gostaria de executar?");
                     System.out.println(" ");
                     System.out.println("0) Sair.");
@@ -124,11 +124,10 @@ public class Main {
                     System.out.println("2) Visualizar extrato.");
                     System.out.println("3) Visualizar transação.");
                     System.out.println(" ");
-                    option = scanner.nextInt();
-                    switch (option) {
-                        case 0:
-                            break;
-                        case 1:
+                    optio = scanner.nextInt();
+                    switch (optio) {
+                        case 0 -> optio = 0;
+                        case 1 -> {
                             System.out.println("Destribuir moedas");
                             System.out.println(" ");
                             System.out.println("Quantas moedas gostaria de destribuir?");
@@ -136,19 +135,19 @@ public class Main {
                             System.out.println("Qual o motivo?");
                             String motivo = scanner.next();
                             professor.distribuirMoedas(quantMoedas, aluno, motivo);
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             System.out.println("Extrato do professor: ");
                             String extrto = professor.visualizar_extrato();
                             System.out.println(extrto);
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             System.out.println("TRansações do professor: ");
                             List<Transacao> transacoes = professor.getTransacoes();
-                            for (Transacao transacao_ : transacoes){
+                            for (Transacao transacao_ : transacoes) {
                                 System.out.println(transacao_.toString());
                             }
-                            break;
+                        }
                     }
             }
 

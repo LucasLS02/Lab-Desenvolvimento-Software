@@ -47,13 +47,12 @@ public class Empresa extends Usuario_login {
 	public void setVantagens(List<Vantagem> vantagens) {
 		this.vantagens = vantagens;
 	}
-	
+
 	@Override
 	public String toString() {
-		return  super.toString() +
-				"Empresa{" +
-				"vantagens=" + vantagens+
-				"} ";
+		return "Empresa{" +
+				"path='" + path + '\'' +
+				", vantagens=" + vantagens +
+				"} " + super.toString();
 	}
-
 }

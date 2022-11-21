@@ -8,35 +8,36 @@ import TransacoesEVantagens.Vantagem;
 import Usuario.Usuario_login;
 
 public class Empresa extends Usuario_login {
-	private List<Vantagem> vantagens = new LinkedList<Vantagem>();
+
+	String path = "/Users/lucas/Desktop/Faculdade/4 Período/Laboratorio de desenvolvimento de software/Lab-Desenvolvimento-Software/Projeto - 4/vantagens.txt";
+	private List<Vantagem> vantagens = new LinkedList<>();
 
 	public Empresa(String nome, String email, String cpf, String rg, String endereco, String username, String senha) {
 		super(nome, email, cpf, rg, endereco, username, senha);
 	}
 
 	public void zerarVantagens() throws IOException {
-		ManipuladorArquivo.escritor("../Lab_de_Desenvolvimento/Projeto - 4/vantagens.txt", "", false);
+		ManipuladorArquivo.escritor(path, "", false);
 		vantagens.clear();
 	}
 	
 	public void cadastrarVantagem(Vantagem vantagem) throws IOException {
-		ManipuladorArquivo.escritor("../Lab_de_Desenvolvimento/Projeto - 4/vantagens.txt", vantagem.toString(), true);
+		ManipuladorArquivo.escritor(path, vantagem.toString(), true);
 		this.vantagens.add(vantagem);
 	}
 
 	public void removerVantagem(Vantagem vantagem) throws IOException {
 		vantagens.remove(vantagem);
-		int tamanhoAtual = vantagens.size();
 
-		ManipuladorArquivo.escritor("../Lab_de_Desenvolvimento/Projeto - 4/vantagens.txt", "", false);
-		
-		for(int i=0; i<tamanhoAtual; i++) {
-			cadastrarVantagem(vantagens.get(i));
+		ManipuladorArquivo.escritor(path, "", false);
+
+		for (Vantagem vantagen : vantagens) {
+			cadastrarVantagem(vantagen);
 		}
 	}
 	
 	public String listarVantagens() throws IOException {
-		return ManipuladorArquivo.leitor("../Lab_de_Desenvolvimento/Projeto - 4/vantagens.txt");
+		return ManipuladorArquivo.leitor(path);
 	}
 
 	public List<Vantagem> getVantagens() {

@@ -9,7 +9,7 @@ import TransacoesEVantagens.Transacao;
 import Usuario.Usuario_login;
 
 public class Professor extends Usuario_login implements Usuario_visualizador {
-	private List<Transacao> transacoes = new LinkedList<Transacao>();
+	private List<Transacao> transacoes = new LinkedList<>();
 	private String departamento;
 	private double moedas;
 	
@@ -21,13 +21,13 @@ public class Professor extends Usuario_login implements Usuario_visualizador {
 
 	@Override
 	public String visualizar_extrato() {
-		String resp = "Extrato atual: " + this.moedas + "\nTransações:\n";
+		StringBuilder resp = new StringBuilder("Extrato atual: " + this.moedas + "\nTransações:\n");
 		
 		for(Transacao t : transacoes) {
-			resp += t.toString();
+			resp.append(t.toString());
 		}
 		
-		return resp;
+		return resp.toString();
 	}
 
 	@Override

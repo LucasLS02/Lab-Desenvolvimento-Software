@@ -9,7 +9,7 @@ import Usuario.Usuario_login;
 
 public class Empresa extends Usuario_login {
 
-	String path = "/Users/lucas/Desktop/Faculdade/4 Período/Laboratorio de desenvolvimento de software/Lab-Desenvolvimento-Software/Projeto - 4/vantagens.txt";
+	String path = "../Lab_de_Desenvolvimento/Projeto - 4/vantagens.txt";
 	private List<Vantagem> vantagens = new LinkedList<>();
 
 	public Empresa(String nome, String email, String cpf, String rg, String endereco, String username, String senha) {
@@ -20,7 +20,7 @@ public class Empresa extends Usuario_login {
 		ManipuladorArquivo.escritor(path, "", false);
 		vantagens.clear();
 	}
-	
+
 	public void cadastrarVantagem(Vantagem vantagem) throws IOException {
 		ManipuladorArquivo.escritor(path, vantagem.toString(), true);
 		this.vantagens.add(vantagem);
@@ -35,7 +35,7 @@ public class Empresa extends Usuario_login {
 			cadastrarVantagem(vantagen);
 		}
 	}
-	
+
 	public String listarVantagens() throws IOException {
 		return ManipuladorArquivo.leitor(path);
 	}
@@ -47,12 +47,12 @@ public class Empresa extends Usuario_login {
 	public void setVantagens(List<Vantagem> vantagens) {
 		this.vantagens = vantagens;
 	}
-	
+
 	@Override
 	public String toString() {
-		return  super.toString() +
+		return super.toString() +
 				"Empresa{" +
-				"vantagens=" + vantagens+
+				"vantagens=" + vantagens +
 				"} ";
 	}
 

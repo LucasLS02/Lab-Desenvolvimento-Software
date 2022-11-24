@@ -45,8 +45,8 @@ public class Transacao {
     public String toString() {
         return "Transacao{" +
                 "id_transacao=" + id_transacao +
-                ", usuario_remetente='" + usuario_remetente + '\'' +
-                ", usuario_destinatario='" + usuario_destinatario + '\'' +
+                ", usuario_remetente='" + usuario_remetente.getNome() + '\'' +
+                ", usuario_destinatario='" + usuario_destinatario.getNome() + '\'' +
                 ", quantidade_moedas=" + quantidade_moedas +
                 "}\n";
     }

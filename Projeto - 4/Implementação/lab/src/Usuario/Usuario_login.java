@@ -7,28 +7,27 @@ public class Usuario_login extends Usuario {
     private String senha;
 
     protected Usuario_login(String nome, String email, String cpf, String rg, String endereco, String username,
-                         String senha) {
+            String senha) {
         super(nome, email, cpf, rg, endereco);
         setUsername(username);
         setSenha(senha);
         setIs_looged(false);
     }
 
-    public static Usuario_login realizar_cadastro(String nome, String email, String cpf, String rg, String endereco, String username, String senha){
+    public static Usuario_login realizar_cadastro(String nome, String email, String cpf, String rg, String endereco,
+            String username, String senha) {
         return new Usuario_login(nome, email, cpf, rg, endereco, username, senha);
     }
 
-    public String realizar_login(String username, String senha){
+    public String realizar_login(String username, String senha) {
         String response = "";
-        if(isIs_looged()){
+        if (isIs_looged()) {
             response = "Usuário já está logado";
-        }
-        else {
-            if(getUsername().equals(username) && getSenha().equals(senha)){
+        } else {
+            if (getUsername().equals(username) && getSenha().equals(senha)) {
                 setIs_looged(true);
                 response = "Usuário logou com sucesso";
-            }
-            else {
+            } else {
                 response = "Usuário ou senha incorreto";
             }
         }
@@ -37,12 +36,17 @@ public class Usuario_login extends Usuario {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Usuario_login that)) return false;
-        if (!super.equals(o)) return false;
+        if (this == o)
+            return true;
+        if (!(o instanceof Usuario_login that))
+            return false;
+        if (!super.equals(o))
+            return false;
 
-        if (is_looged != that.is_looged) return false;
-        if (!username.equals(that.username)) return false;
+        if (is_looged != that.is_looged)
+            return false;
+        if (!username.equals(that.username))
+            return false;
         return senha.equals(that.senha);
     }
 
@@ -81,7 +85,8 @@ public class Usuario_login extends Usuario {
 
     @Override
     public String toString() {
-        return super.toString() + "Usuario_login{" +
+        return super.toString() +
+                "Usuario_login{" +
                 "is_looged=" + is_looged +
                 ", username='" + username + '\'' +
                 ", senha='" + senha + '\'' +

@@ -87,10 +87,12 @@ public class Professor extends Usuario_login implements Usuario_visualizador {
 
 	@Override
 	public String toString() {
-		return super.toString() +
-				"Professor{" +
-				"departamento=" + departamento +
-				"moedas=" + moedas +
-				"} ";
+		//return String.format("Professor: transacoes: %s, departamento:x//")
+		return "Professor{" +
+				"transacoes=" + transacoes.toString() +
+				", departamento='" + departamento + '\'' +
+				", moedas=" + moedas +
+				"} " + super.toString();
 	}
+
 }

@@ -31,8 +31,8 @@ public class Empresa extends Usuario_login {
 
 		ManipuladorArquivo.escritor(path, "", false);
 
-		for (Vantagem vantagen : vantagens) {
-			cadastrarVantagem(vantagen);
+		for (Vantagem v : vantagens) {
+			ManipuladorArquivo.escritor(path, v.toString(), true);
 		}
 	}
 

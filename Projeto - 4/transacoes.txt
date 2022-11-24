@@ -22,3 +22,7 @@ Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas
 
 Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=100}
 
+Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=9}
+
+Transacao{id_transacao=2, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=1}
+

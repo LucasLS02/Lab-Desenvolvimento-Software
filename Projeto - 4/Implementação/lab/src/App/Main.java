@@ -74,11 +74,17 @@ public class Main {
                             String t = scanner.nextLine();
 
                             List<Vantagem> vantagem_ = empresa.getVantagens();
+                            Vantagem vRemovida = null;
                             for (Vantagem vantagem : vantagem_) {
                                 if (vantagem.getTitulo().equals(t)) {
-                                    empresa.removerVantagem(vantagem);
-                                    System.out.println("Vantagem removida.");
+                                    vRemovida = vantagem;
                                 }
+                            }
+                            if(vRemovida != null) {
+                                empresa.removerVantagem(vRemovida);
+                                System.out.println("Vantagem removida.");
+                            } else {
+                                System.out.println("Vantagem não encontrada.");
                             }
                             break;
                         case 3:
@@ -111,7 +117,11 @@ public class Main {
                             System.out.println(linha);
                             System.out.println("Qual o nome da vantagem? ");
                             String vantagem_empresa = scanner.nextLine();
-                            aluno.resgatarVantagem(empresa, vantagem_empresa);
+                            try {
+                                aluno.resgatarVantagem(empresa, vantagem_empresa);
+                            } catch(ExcecaoSaldoIndisponivel e) {
+                                System.out.println(e);
+                            }
                             break;
                         case 2:
                             System.out.println("Extrato do aluno: ");

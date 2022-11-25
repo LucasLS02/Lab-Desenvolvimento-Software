@@ -1,24 +1,2 @@
-Transacao{id_transacao=1, usuario_remetente='Usuario.Usuario{nome='Breno', email='breno.brandao@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Professor{departamento=Engenharia de Softwaremoedas=1000.0} ', usuario_destinatario='Usuario.Usuario{nome='Lucas', email='lucas.lage@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Aluno{transacoes=[], moedas=0} ', quantidade_moedas=12}
 
-Transacao{id_transacao=1, usuario_remetente='Usuario.Usuario{nome='Breno', email='breno.brandao@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Professor{departamento=Engenharia de Softwaremoedas=1000.0} ', usuario_destinatario='Usuario.Usuario{nome='Lucas', email='lucas.lage@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Aluno{transacoes=[], moedas=0} ', quantidade_moedas=12}
-
-Transacao{id_transacao=1, usuario_remetente='Usuario.Usuario{nome='Breno', email='breno.brandao@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Professor{departamento=Engenharia de Softwaremoedas=1000.0} ', usuario_destinatario='Usuario.Usuario{nome='Lucas', email='lucas.lage@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Aluno{transacoes=[], moedas=0} ', quantidade_moedas=12}
-
-Transacao{id_transacao=1, usuario_remetente='Usuario.Usuario{nome='Breno', email='breno.brandao@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Professor{departamento=Engenharia de Softwaremoedas=1000.0} ', usuario_destinatario='Usuario.Usuario{nome='Lucas', email='lucas.lage@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Aluno{transacoes=[], moedas=0} ', quantidade_moedas=123}
-
-Transacao{id_transacao=1, usuario_remetente='Usuario.Usuario{nome='Breno', email='breno.brandao@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Professor{departamento=Engenharia de Softwaremoedas=1000.0} ', usuario_destinatario='Usuario.Usuario{nome='Lucas', email='lucas.lage@gjmail.com', cpf='14562837765', rg='837252870', endereco='rua fulano de tal, 590'}Usuario_login{is_looged=false, username='lucasls02', senha='123123'} Aluno{transacoes=[], moedas=0} ', quantidade_moedas=12}
-
-Transacao{id_transacao=1, usuario_remetente='Professor{departamento=Engenharia de Softwaremoedas=1000.0} ', usuario_destinatario='Aluno{transacoes=[], moedas=0} ', quantidade_moedas=12}
-
-Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=12}
-
-Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=12}
-
-Transacao{id_transacao=2, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=18}
-
-Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=12}
-
-Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=12}
-
-Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=100}
-
+Transacao{id_transacao=1, usuario_remetente='Breno', usuario_destinatario='Lucas', quantidade_moedas=100, motivoTransacao='qw'}

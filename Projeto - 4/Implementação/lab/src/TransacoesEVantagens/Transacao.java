@@ -20,7 +20,7 @@ public class Transacao {
         setUsuario_destinatario(usuario_destinatario);
         setQuantidade_moedas(quantidade_moedas);
         setMotivoTransacao(motivoTransacao);
-        ManipuladorArquivo.escritor("/Users/lucas/Desktop/Faculdade/4 Período/Laboratorio de desenvolvimento de software/Lab-Desenvolvimento-Software/Projeto - 4/vantagens.txt", this.toString(), true);
+        ManipuladorArquivo.escritor("../Lab_de_Desenvolvimento/Projeto - 4/transacoes.txt", this.toString(), true);
     }
 
     @Override

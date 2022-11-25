@@ -31,13 +31,19 @@ public class Empresa extends Usuario_login {
 
 		ManipuladorArquivo.escritor(path, "", false);
 
-		for (Vantagem vantagen : vantagens) {
-			cadastrarVantagem(vantagen);
+		for (Vantagem v : vantagens) {
+			ManipuladorArquivo.escritor(path, v.toString(), true);
 		}
 	}
 
 	public String listarVantagens() throws IOException {
-		return ManipuladorArquivo.leitor(path);
+		StringBuilder resp = new StringBuilder("");
+
+		for(Vantagem v : vantagens) {
+			resp.append(v.toString() + "\n");
+		}
+
+		return resp.toString();
 	}
 
 	public List<Vantagem> getVantagens() {

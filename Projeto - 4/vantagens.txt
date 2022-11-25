@@ -1,3 +1,2 @@
 
-Vantagem{titulo=qw, descricao='qw', custo='12'}
-Vantagem{titulo=qw, descricao='qw', custo='10'}
+Vantagem{titulo='as', descricao='as', custo=12}

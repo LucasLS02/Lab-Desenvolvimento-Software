@@ -3,7 +3,6 @@ package Pessoas;
 import java.util.*;
 
 import Excecoes.ExcecaoIdIncorreta;
-import Excecoes.ExcecaoSaldoIndisponivel;
 import Interfaces.Usuario_visualizador;
 import TransacoesEVantagens.Transacao;
 import TransacoesEVantagens.Vantagem;
@@ -53,13 +52,11 @@ public class Aluno extends Usuario_login implements Usuario_visualizador {
 		}
 	}
 
-	public void resgatarVantagem(Empresa empresa, String tituloVantagem) throws ExcecaoSaldoIndisponivel {
+	public void resgatarVantagem(Empresa empresa, String tituloVantagem) {
 		for (Vantagem v : empresa.getVantagens()) {
-			if ((v.getTitulo().equals(tituloVantagem)) && (this.moedas - v.getCusto() >= 0)) {
+			if (v.getTitulo().equals(tituloVantagem)) {
 				this.moedas -= v.getCusto();
 				vantagensResgatadas.add(v);
-			} else {
-				throw new ExcecaoSaldoIndisponivel();
 			}
 		}
 	}

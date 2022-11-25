@@ -31,8 +31,8 @@ public class Empresa extends Usuario_login {
 
 		ManipuladorArquivo.escritor(path, "", false);
 
-		for (Vantagem v : vantagens) {
-			ManipuladorArquivo.escritor(path, v.toString(), true);
+		for (Vantagem vantagen : vantagens) {
+			cadastrarVantagem(vantagen);
 		}
 	}
 
@@ -50,16 +50,9 @@ public class Empresa extends Usuario_login {
 
 	@Override
 	public String toString() {
-<<<<<<< HEAD
 		return super.toString() +
 				"Empresa{" +
 				"vantagens=" + vantagens +
 				"} ";
-=======
-		return "Empresa{" +
-				"path='" + path + '\'' +
-				", vantagens=" + vantagens +
-				"} " + super.toString();
->>>>>>> 6d31840a2643809c06baa20d68db43192717b5e2
 	}
 }

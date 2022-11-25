@@ -11,7 +11,7 @@ import Usuario.Usuario_login;
 public class Professor extends Usuario_login implements Usuario_visualizador {
 	private List<Transacao> transacoes = new LinkedList<>();
 	private String departamento;
-	private int moedas;
+	private double moedas;
 
 	public Professor(String nome, String email, String cpf, String rg, String endereco, String username, String senha,
 			String departamento) {
@@ -77,11 +77,11 @@ public class Professor extends Usuario_login implements Usuario_visualizador {
 		this.departamento = departamento;
 	}
 
-	public int getMoedas() {
+	public double getMoedas() {
 		return moedas;
 	}
 
-	public void setMoedas(int moedas) {
+	public void setMoedas(double moedas) {
 		this.moedas = moedas;
 	}
 
